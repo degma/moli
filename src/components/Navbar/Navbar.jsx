@@ -1,8 +1,8 @@
 import React from 'react'
 import logo from '../../assets/moli.svg'
-import './Navbar.css'
+import './NavBar.css'
 
-function Navbar() { 
+function NavBar() { 
 
     return (
     <div className="navbar">
@@ -16,4 +16,4 @@ function Navbar() {
     </div>
 )}
 
-export default Navbar
+export default NavBar
