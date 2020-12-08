@@ -1,0 +1,15 @@
+.product-list-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.product-card-list {
+    display: flex;
+    flex-direction: row;
+
+}
+
+h1 {
+    padding: 5px;
+}

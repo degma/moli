@@ -1,19 +1,24 @@
 import React from 'react'
 import logo from '../../assets/moli.svg'
-import './NavBar.css'
+import CartWidget from '../CartWidget'
+import './Navbar.css'
 
-function NavBar() { 
+function Navbar() {
 
     return (
-    <div className="navbar">
-        <img className="logo" src={logo} alt="Logo MOLI SÁNDWICHES DE MIGA Y TORTAS"/>
-        <ul className="menu">
-            <li><a href="home">INICIO</a></li>
-            <li><a href="productos">PRODUCTOS</a></li>
-            <li><a href="catering">CATERING</a></li>
-            <li><a href="contacto">CONTACTO</a></li>
-        </ul>
-    </div>
-)}
+        <div className="navbar">
+            <img className="logo" src={logo} alt="Logo MOLI SÁNDWICHES DE MIGA Y TORTAS" />
+            <div className="menu">
+                <ul >
+                    <li><a href="home">INICIO</a></li>
+                    <li><a href="productos">PRODUCTOS</a></li>
+                    <li><a href="catering">CATERING</a></li>
+                    <li><a href="contacto">CONTACTO</a></li>
+                </ul>
+            </div>
+            <CartWidget value="2" />
+        </div>
+    )
+}
 
-export default NavBar
+export default Navbar

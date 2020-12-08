@@ -1,0 +1,31 @@
+.product-card {
+    height: 250px;
+    width: 200px;
+    border: 1px solid lightgray;
+    margin: 5px;
+}
+
+.card-image {
+    height: 150px;
+    width: 199px;
+    background-color: lightgray;
+}
+.card-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+h1 {
+    font-size: 16px;
+}
+h2{
+    font-size: 14px;
+    color: gray;
+}
+
+p {
+    font-size: 11px;
+    margin: 0px;
+}
+

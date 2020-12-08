@@ -1,0 +1,26 @@
+.cart-icon {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  float: left;
+}
+.items {
+  border: 0px solid transparent;
+  border-radius: 999999px;
+  background-color: red;
+  height: 16px;
+  width: 16px;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+}
+.cart-widget-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0px;
+  position: relative;
+}
