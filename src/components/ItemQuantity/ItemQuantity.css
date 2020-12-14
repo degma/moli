@@ -1,0 +1,33 @@
+.item-quantity-container {
+    width: 100px;
+    height: 32px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.add-remove-icons {
+    width: 10px;
+    height: 10px;
+}
+
+.add-remove-buttons {
+    width: 20px;
+    height: 20px;
+    border-radius: 9999px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-color: transparent;
+}
+
+button.add-remove-buttons:hover {
+    border-color: orange;
+}

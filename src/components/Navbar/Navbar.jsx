@@ -10,10 +10,9 @@ function Navbar() {
             <img className="logo" src={logo} alt="Logo MOLI SÁNDWICHES DE MIGA Y TORTAS" />
             <div className="menu">
                 <ul >
-                    <li><a href="home">INICIO</a></li>
-                    <li><a href="productos">PRODUCTOS</a></li>
-                    <li><a href="catering">CATERING</a></li>
-                    <li><a href="contacto">CONTACTO</a></li>
+                    <li><a href="productos">Productos</a></li>
+                    <li><a href="catering">Catering</a></li>
+                    <li><a href="contacto">Zonas de Envío</a></li>
                 </ul>
             </div>
             <CartWidget value="2" />

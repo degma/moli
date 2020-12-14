@@ -1,11 +1,18 @@
 import CartIcon from '../../assets/shopping-cart.svg'
 import './CartWidget.css'
 
-const CartWidget = ({ value = 0}) => (
+const CartWidget = ({ value = 0 }) => (
     <div className="cart-widget-container">
-        <div className="items">{value}</div>
-        <img src={CartIcon} alt="icono del carrito" className="cart-icon"/>
+        <div className="cart-icon-container">
+            <img src={CartIcon} alt="icono del carrito" className="cart-icon" />
+            <div className="items">{value}</div>
+        </div>
+        <div className="cart-text-and-total">
+            <h4>Mi Carrito</h4>
+            <p>$1000</p>
+        </div>
     </div>
+
 )
 
 
