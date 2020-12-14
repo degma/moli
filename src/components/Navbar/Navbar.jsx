@@ -15,7 +15,7 @@ function Navbar() {
                     <li><a href="contacto">Zonas de Envío</a></li>
                 </ul>
             </div>
-            <CartWidget value="2" />
+            <CartWidget value="2" total="980.00"/>
         </div>
     )
 }

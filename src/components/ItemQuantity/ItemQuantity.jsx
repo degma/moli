@@ -14,7 +14,7 @@ const ItemQuantity = ({ value = 0, onChange }) => {
             <button className="add-remove-buttons" onClick={() => handleChange("m")}>
                 <img className="add-remove-icons" src={Minus} />
             </button>
-            <p>{value}</p>
+            <p className="quantity-value">{value}</p>
             <button className="add-remove-buttons" onClick={() => handleChange("p")}>
                 <img className="add-remove-icons" src={Plus} />
             </button>

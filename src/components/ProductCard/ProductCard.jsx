@@ -1,30 +1,29 @@
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import ItemQuantity from '../ItemQuantity'
 import AddCartButton from '../AddCartButton'
 import './ProductCard.css'
 
-const ProductCard = ({ name, description, price }) => {
+const ProductCard = ({ name, description, price,picture }) => {
     let [quantity, setQuantity] = useState(0)
     function handleChange(a) {
-        if (a==="m"){
-            if(quantity>0){
-                setQuantity(quantity--)
-                console.log(quantity)
+        if (a === "m") {
+            if (quantity > 0) {
+                setQuantity(quantity - 1)
             }
         }
-        if(a==="p"){
-            setQuantity(quantity++)
-            console.log(quantity)
+        if (a === "p") {
+            setQuantity(quantity + 1)
         }
     }
-    useEffect(()=> console.log(quantity),[quantity])
     return (
         <div className="product-card">
-            <div className="card-image"></div>
-            <div className="product-description">
+            <div className="card-image">
+                <img src={picture} className="product-picture" />
+            </div>
+            <div className="product-details">
                 <h1>{name}</h1>
-                <p>{description}</p>
+                <p className="product-description">{description}</p>
                 <h2>${price}</h2>
                 <footer className="footer-buttons">
                     <AddCartButton />
