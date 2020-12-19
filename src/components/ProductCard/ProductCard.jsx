@@ -1,16 +1,16 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ItemQuantity from '../ItemQuantity'
 import AddCartButton from '../AddCartButton'
 import './ProductCard.css'
 
-const ProductCard = ({ name, description, price,picture }) => {
+
+const ProductCard = ({ name, description, price, picture }) => {
     let [quantity, setQuantity] = useState(0)
+    
     function handleChange(a) {
         if (a === "m") {
-            if (quantity > 0) {
-                setQuantity(quantity - 1)
-            }
+            setQuantity(quantity - 1)
         }
         if (a === "p") {
             setQuantity(quantity + 1)

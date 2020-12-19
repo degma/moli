@@ -10,12 +10,6 @@ p{
   margin: auto;
   
   background-color: #FFFFFF;
-  background: -moz-linear-gradient(top, #d7d6d2, #f9ffff);
-  background-image: linear-gradient(top, #d7d6d2, #f9ffff);
-  background-image: -o-linear-gradient(top, #d7d6d2, #f9ffff);
-  background-image: -moz-linear-gradient(top, #d7d6d2, #f9ffff);
-  background-image: -webkit-linear-gradient(top, #d7d6d2, #f9ffff);
-  background-image: -ms-linear-gradient(top, #d7d6d2, #f9ffff);
 
   @media only screen and (max-width: 600px) {
     width: 100%;
