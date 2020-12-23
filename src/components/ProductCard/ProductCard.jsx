@@ -26,7 +26,7 @@ const ProductCard = ({ name, description, price, picture }) => {
                 <p className="product-description">{description}</p>
                 <h2>${price}</h2>
                 <footer className="footer-buttons">
-                    <AddCartButton />
+                    <AddCartButton buttontxt="AGREGAR"/>
                     <ItemQuantity onChange={handleChange} value={quantity} />
                 </footer>
             </div>

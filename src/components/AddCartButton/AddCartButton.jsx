@@ -1,8 +1,8 @@
 
 import './AddCartButton.css'
 
-const AddCartButton = () => (
-    <button className="add-button" alt="Agregar al Carrito">AGREGAR</button>
+const AddCartButton = ({buttontxt}) => (
+<button className="add-button" alt="Agregar al Carrito">{buttontxt}</button>
 )
 
 export default AddCartButton

@@ -1,8 +1,11 @@
 
-button {
-    width: 100px;
+.add-button {
+max-width: 500px;
+min-width: 100px;
 height: 32px;
-border: 1px solid lightgray;
+border: 1px solid transparent;
+background-color: var(--secondary-color);
+color: white;
 border-radius: 4px;
 font-size: 12px;
 font-weight: bold;
