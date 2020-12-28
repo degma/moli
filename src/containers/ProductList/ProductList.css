@@ -6,11 +6,7 @@
 
 .product-card-list {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: flex-start;
 }
 
-h1 {
-    font-size: 14px;
-    padding: 4px;
-}

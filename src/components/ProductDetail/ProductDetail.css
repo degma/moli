@@ -1,6 +1,5 @@
 .product-detail-picture{
     width: 400px;
-    height: 400px;
 }
 
 .product-detail{
@@ -21,6 +20,7 @@
     text-transform: uppercase;
     padding: 0px;
     margin: 10px 0px 10px 0px;
+    text-align: left;
 }
 
 .product-detail-description{

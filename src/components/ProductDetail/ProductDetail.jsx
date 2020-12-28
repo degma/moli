@@ -6,6 +6,7 @@ import './ProductDetail.css'
 
 const ProductDetail = ({ item }) => {
     let [quantity, setQuantity] = useState(0)
+    console.log("ITEM", item)
 
     function handleChange(a) {
         if (a === "m") {
@@ -18,7 +19,7 @@ const ProductDetail = ({ item }) => {
 
     return (
         <article className="product-detail">
-            <img src="http://placehold.it/500x600" className="product-detail-picture" />
+            <img src={item.pictureUrl} className="product-detail-picture" />
             <div className="product-info">
                 <h1 className="product-detail-name">{item.name}</h1>
                 <p className="product-detail-price">$ {item.price}</p>

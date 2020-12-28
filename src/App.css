@@ -3,6 +3,9 @@ p{
   text-align: center;
   color: gray;
 }
+h1{
+  text-align: center;
+}
 
 .main-container {
   width: 1170px;
@@ -11,7 +14,11 @@ p{
   
   background-color: #FFFFFF;
 
-  @media only screen and (max-width: 600px) {
-    width: 100%;
-  }
+
+}
+
+h1{
+  font-size: 34px;
+  font-weight: 200;
+  text-transform: uppercase;
 }

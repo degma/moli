@@ -1,0 +1,18 @@
+h2.category-card-name{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+}
+
+
+div.category-card-container:hover {
+    color: var(--secondary-color);
+    border: 1px red;
+}
+
+img.category-card-picture{
+    width: 300px;
+    height: 100%;
+}

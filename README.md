@@ -1,3 +1,19 @@
+# E-COMMERCE
+
+Este proyecto fue construido para el curso de ReactJS de CoderHouse, utilizando 'create-react-app' y 'react-router-dom' para manejar las rutas. Al momento los estilos se estan realizando puramente con CSS. Para mejorar la organización el proyecto se encuentra estructurado en: Components, Containers y Pages. Las funcionalidades actuales son: 
+- Listar Categorías
+- Listar Productos de una Categoría
+- Listar Productos
+- Ver detalles de un producto
+- Mostrar las páginas: Contacto, Envíos y Carrito de Compras
+
+A continuación una demo de la navegabilidad con la funcionalidad actual: 
+
+![](demo_site.gif)
+
+
+Para instalar este proyecto en local, seguir las siguientes instrucciones:
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

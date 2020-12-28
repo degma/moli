@@ -1,41 +1,16 @@
 
 import ProductCard from '../../components/ProductCard'
-import Triple from '../../assets/img/triple.jpg'
 import './ProductList.css'
 import { useEffect, useState } from 'react'
-
-const PRODUCTS = [
-    {
-        id: 1000,
-        name: " Sandwich de Miga Tradicional",
-        description: "Descripción",
-        price: 850
-    },
-    {
-        id: 1000,
-        name: " Sandwich de Miga Tradicional",
-        description: "Descripción",
-        price: 850
-    },
-    {
-        id: 1000,
-        name: " Sandwich de Miga Tradicional",
-        description: "Descripción",
-        price: 850
-    },
-    {
-        id: 1000,
-        name: " Sandwich de Miga Tradicional",
-        description: "Descripción",
-        price: 850
-    }
-]
+import PRODUCTS from '../../utils/sample-data'
 
 const ProductList = ({ title }) => {
+
     const [products, setProducts] = useState([]);
 
     const getProducts = new Promise((resolve, reject) => {
-        setTimeout(() => resolve(PRODUCTS), 2000)
+        setTimeout(() => resolve(PRODUCTS), 200)
+        console.log(PRODUCTS)
     })
 
 
@@ -49,12 +24,12 @@ const ProductList = ({ title }) => {
             <div className="product-card-list">
                 {
                     products.length ?
-                    (products.map(item => (
-                        <ProductCard key={item.id} name={item.name} description={item.description} price={item.price} picture={Triple} />
-                    ))) :
-                    (
-                        <p> Cargando productos...</p>
-                    )
+                        (products.map(item => (
+                            <ProductCard key={item.id} {...item} />
+                        ))) :
+                        (
+                            <p> Cargando productos...</p>
+                        )
                 }
             </div>
         </div>

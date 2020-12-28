@@ -40,7 +40,7 @@ h4{
 .items {
   border: 1px solid white;
   border-radius: 999999px;
-  background-color: red;
+  background-color: var(--secondary-color);
   height: 18px;
   width: 18px;
   color: white;
@@ -54,6 +54,6 @@ h4{
 .cart-total {
   font-size: 14px;
   font-weight: 800;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   margin: 0px;
 }
