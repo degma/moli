@@ -1,8 +1,11 @@
 
 import './AddCartButton.css'
 
-const AddCartButton = ({buttontxt}) => (
-<button className="add-button" alt="Agregar al Carrito">{buttontxt}</button>
-)
+const AddCartButton = ({ buttontxt, handleClick }) => {
+
+    return (
+        <button className="add-button" alt="Agregar al Carrito" onClick={handleClick}>{buttontxt}</button>
+    )
+}
 
 export default AddCartButton

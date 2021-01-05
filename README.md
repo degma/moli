@@ -1,9 +1,9 @@
 # E-COMMERCE
 
-Este proyecto fue construido para el curso de ReactJS de CoderHouse, utilizando 'create-react-app' y 'react-router-dom' para manejar las rutas. Al momento los estilos se estan realizando puramente con CSS. Para mejorar la organización el proyecto se encuentra estructurado en: Components, Containers y Pages. Las funcionalidades actuales son: 
+Este proyecto fue construido para el curso de ReactJS de CoderHouse, utilizando 'create-react-app' y 'react-router-dom' para manejar las rutas. Al momento los estilos se estan realizando puramente con CSS. Para mejorar la organización, el proyecto se encuentra estructurado en: Components, Containers y Pages. Las funcionalidades actuales son: 
 - Listar Categorías
 - Listar Productos de una Categoría
-- Listar Productos
+- Listar Todos los Productos
 - Ver detalles de un producto
 - Mostrar las páginas: Contacto, Envíos y Carrito de Compras
 

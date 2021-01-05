@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import { useEffect } from 'react';
 import Navbar from "./containers/Navbar";
 import Footer from "./containers/Footer";
 import ContactPage from "./pages/ContactPage";
@@ -13,6 +13,15 @@ import ProductsPage from "./pages/ProductsPage";
 import ProductPage from "./pages/ProductPage";
 
 function App() {
+  
+  const windowResize = (e)=>{
+    console.log(e)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize',windowResize)
+  }, [])
+
   return (
     <Router>
       <div className="main-container">
