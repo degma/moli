@@ -38,3 +38,26 @@
     display: inline-flex;
     gap: 10px;
 }
+.product-detail-addedunits {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    max-width: fit-content;
+    gap: 10px;
+    margin-top: 10px;
+    border: 5px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+
+}
+
+.product-detail-addedunits > button {
+    border: 0px;
+}
+
+@media only screen and (max-widht: 400px){
+    .product-detail {
+        display: flex;
+        flex-direction: column;
+    }
+}

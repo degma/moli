@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useEffect } from 'react';
+import { useEffect, useState } from "react";
 import Navbar from "./containers/Navbar";
 import Footer from "./containers/Footer";
 import ContactPage from "./pages/ContactPage";
@@ -11,50 +11,59 @@ import ShippingPage from "./pages/ShippingPage";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductPage from "./pages/ProductPage";
+import { Store } from "./store";
 
 function App() {
-  
-  const windowResize = (e)=>{
-    console.log(e)
-  }
+  const [data, setData] = useState({
+    cart:{
+      total:0,
+      itemsQty: 0,
+      items:[]
+    }
+  });
+  const windowResize = (e) => {
+    console.log(e);
+  };
 
   useEffect(() => {
-    window.addEventListener('resize',windowResize)
-  }, [])
+    window.addEventListener("resize", windowResize);
+  }, []);
 
   return (
-    <Router>
-      <div className="main-container">
-        <Navbar />
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route exact path="/productos">
-            <ProductsPage />
-          </Route>
-          <Route path="/productos/:productName?">
-            <ProductPage />
-          </Route>
-          <Route path="/contacto">
-            <ContactPage />
-          </Route>
-          <Route path="/categoria/:categoryName?">
-            <CategoryPage />
-          </Route>
-          <Route path="/carrito">
-            <CartPage />
-          </Route>
-          <Route path="/envios">
-            <ShippingPage />
-          </Route>
-          <Route path="*">
-            <ErrorPage />
-          </Route>
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
+    <Store.Provider value={[data, setData]}>
+      <Router>
+        <div className="main-container">
+          <Navbar />
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route exact path="/productos">
+              <ProductsPage />
+            </Route>
+            <Route path="/productos/:productName?">
+              <ProductPage />
+            </Route>
+            <Route path="/contacto">
+              <ContactPage />
+            </Route>
+            <Route path="/categoria/:categoryName?">
+              <CategoryPage />
+            </Route>
+            <Route path="/carrito">
+              <CartPage />
+            </Route>
+            <Route path="/envios">
+              <ShippingPage />
+            </Route>
+            <Route path="*">
+              <ErrorPage />
+            </Route>
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
+    </Store.Provider>
   );
 }
 

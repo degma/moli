@@ -20,7 +20,7 @@ export default [
     price: 800,
   },
   {
-    id: 1002,
+    id: 1003,
     name: "Chips x 6un.",
     url:"chips-6-un",
     pictureUrl: "/img/chips.jpg",
@@ -30,7 +30,7 @@ export default [
     price: 250,
   },
   {
-    id: 1002,
+    id: 1004,
     name: "Chips de pancitos integrales x 6un.",
     url:"chips-pancitos-integrales-6-un",
     pictureUrl: "/img/chips_integrales.jpg",
@@ -40,7 +40,7 @@ export default [
     price: 250,
   },
   {
-    id: 1002,
+    id: 1005,
     name: "Fosforitos J&Q x 6un.",
     url:"fosforitos",
     pictureUrl: "/img/fosforitos.jpg",
@@ -50,7 +50,7 @@ export default [
     price: 300,
   },
   {
-    id: 1003,
+    id: 1006,
     name: "Tarta de Frutillas",
     url:"tarta-frutillas",
     pictureUrl: "/img/tarta-frutillas.jpg",
@@ -60,7 +60,7 @@ export default [
     price: 750,
   },
   {
-    id: 1003,
+    id: 1007,
     name: "Coco & Dulce de Leche",
     url:"coco-dulce-de-leche",
     pictureUrl: "/img/coco.jpg",
@@ -70,7 +70,7 @@ export default [
     price: 500,
   },
   {
-    id: 1003,
+    id: 1008,
     name: "Focaccia",
     url:"focaccia",
     pictureUrl: "/img/focaccia.jpg",

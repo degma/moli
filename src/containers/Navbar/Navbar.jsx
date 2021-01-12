@@ -1,12 +1,14 @@
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import logo from '../../assets/moli.svg'
 import CartWidget from '../../components/CartWidget'
 import { Link } from 'react-router-dom'
 import MENU_ITEMS from '../../utils/main-menu'
 import './Navbar.css'
+import { Store } from '../../store'
 
 function Navbar() {
+    const [data, setData] = useContext(Store)
     const [menu, setMenu] = useState([])
 
     const getMenu = new Promise((resolve, reject) => {
@@ -27,7 +29,7 @@ function Navbar() {
                     }
                 </ul>
             </div>
-            <CartWidget value="2" total="980.00" />
+            <CartWidget value={data.cart.itemsQty} total={data.cart.total} />
         </div>
     )
 }

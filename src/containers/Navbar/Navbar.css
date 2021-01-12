@@ -35,9 +35,10 @@ li {
 }
 
 .logo {
-  width: 130px;
-  height: 130px;
+  width: 125px;
+  height: 125px;
 }
+
 
 a.menu-item:hover {
   border: 5px solid var(--secondary-color);
@@ -49,4 +50,17 @@ a {
   text-decoration: none;
   color: black;
   border: 5px solid transparent;
+}
+
+
+@media only screen and (max-width: 400px) {
+
+  .menu {
+    display: none;
+  }
+  .logo{
+    height: 100px;
+    width: 100px;
+  }
+  
 }

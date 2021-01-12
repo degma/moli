@@ -1,5 +1,6 @@
 .product-list-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     margin-top: 20px;
 }
@@ -8,5 +9,16 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
+
+}
+
+@media only screen and (max-width: 400px) {
+    .product-card-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 10px ;
+    }   
 }
 

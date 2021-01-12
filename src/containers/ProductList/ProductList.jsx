@@ -1,10 +1,12 @@
 
 import ProductCard from '../../components/ProductCard'
 import './ProductList.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import PRODUCTS from '../../utils/sample-data'
+import { Store } from '../../store'
 
 const ProductList = ({ title }) => {
+    const [data, setData] = useContext(Store)
 
     const [products, setProducts] = useState([]);
 
@@ -13,6 +15,14 @@ const ProductList = ({ title }) => {
         console.log(PRODUCTS)
     })
 
+    function handleAddCart(qty, ) {
+        if (qty === 0) {
+            return
+        }
+
+        setData({ ...data, cart: { itemsQty: data.cart.itemsQty + qty} })
+
+    }
 
     useEffect(() => {
         getProducts.then((res) => setProducts(res))
@@ -20,12 +30,12 @@ const ProductList = ({ title }) => {
 
     return (
         <div className="product-list-container">
-            <h1>{title}</h1>
+            {/* <h1>{title}</h1> */}
             <div className="product-card-list">
                 {
                     products.length ?
                         (products.map(item => (
-                            <ProductCard key={item.id} {...item} />
+                            <ProductCard key={item.id} {...item} handleAddCart={handleAddCart} />
                         ))) :
                         (
                             <p> Cargando productos...</p>

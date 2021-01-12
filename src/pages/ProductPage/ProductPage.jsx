@@ -12,7 +12,6 @@ const ProductPage = ({ item }) => {
 
     const getProduct = new Promise((resolve, reject) => {
         const filteredProduct = PRODUCTS.filter((item) => item.url === productName)
-        console.log(filteredProduct)
         setTimeout(() => resolve(
             filteredProduct[0]
         ), 1000)
@@ -23,7 +22,6 @@ const ProductPage = ({ item }) => {
         getProduct
             .then(response => {
                 setProduct(response)
-                console.log(response)
             })
     }, []);
 

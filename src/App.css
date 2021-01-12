@@ -11,10 +11,12 @@ h1{
   width: 1170px;
   height: 100vh;
   margin: auto;
-  
   background-color: #FFFFFF;
-
-
+}
+@media only screen and (max-width: 400px) {
+  .main-container {
+    width: 100%;
+  }
 }
 
 h1{

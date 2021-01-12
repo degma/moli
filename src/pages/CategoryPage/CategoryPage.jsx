@@ -25,7 +25,7 @@ const CategoryPage = () => {
                 <div>
                     <h1 className="category-title">{categoryName.replace(/-/g, " ")}</h1>
                     <div className="category-products">
-                        {products.map(item => (<ProductCard key={item.id} {...item} />))}
+                        {products.map(item => (<ProductCard key={item.id} {...item} handleClick={() => handleAddCart()}/>))}
                     </div>
                 </div>
             )
