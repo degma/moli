@@ -43,7 +43,6 @@
     align-content: center;
     justify-content: center;
     max-width: fit-content;
-    gap: 10px;
     margin-top: 10px;
     border: 5px solid var(--primary-color);
     background-color: var(--primary-color);
@@ -55,9 +54,25 @@
     border: 0px;
 }
 
-@media only screen and (max-widht: 400px){
+@media only screen and (max-width: 400px) {
+    .product-detail-picture{
+        width: 100%;
+    }
     .product-detail {
         display: flex;
         flex-direction: column;
+    }
+    .product-detail-name {
+        font-size: 22px;
+    }
+    .product-detail-price{
+        font-size: 22px;
+        font-weight: 700;
+        text-align: left;
+        color: var(--secondary-color);
+    }
+    .product-info{
+        width: 100%;
+        margin: 2px;
     }
 }
