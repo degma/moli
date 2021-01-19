@@ -25,7 +25,7 @@ function Navbar() {
             <div className="menu">
                 <ul >
                     {
-                        menu.map((item)=> <li><Link className="menu-item" to={item.url} >{item.name}</Link></li> )
+                        menu.map((item)=> <li><Link key={item.name} className="menu-item" to={item.url} >{item.name}</Link></li> )
                     }
                 </ul>
             </div>

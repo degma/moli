@@ -26,9 +26,12 @@
   border-spacing: 0px;
 }
 
-tr > td {
+td {
   border: 1px solid var(--light-gray);
+  border-width: 1px;
 }
+
+
 .cart-table-header {
   text-align: center;
 }
@@ -42,7 +45,7 @@ tr > td {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 175px;
+
 }
 
 th,

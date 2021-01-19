@@ -1,25 +1,32 @@
 
 import { useState, useEffect } from "react"
 import CategoryCard from "../../components/CategoryCard"
-import CATEGORIES from "../../utils/categories"
+import { getFirestore } from "../../firebase"
+
 import "./CategoryList.css"
 
 const CategoryList = () => {
     const [categories, setCategories] = useState([])
-    const getCategories = new Promise((resolve, reject) => {
-        setTimeout(()=> resolve(CATEGORIES),500)
-    })
 
     useEffect(() => {
-        getCategories.then(res => setCategories(res))
+
+        const db = getFirestore()
+        const categoryCollection = db.collection("categories")
+        categoryCollection.get().then((querySnapshot) => {
+            if (querySnapshot.size === 0) {
+                console.log("No results!")
+            }
+            setCategories(querySnapshot.docs.map(doc => doc.data()))
+        })
+
     }, [])
     return (
         <div className="category-list-container">
 
             {
                 categories.length ?
-                    (CATEGORIES.map((cat) => <CategoryCard name={cat.name} categoryUrl={cat.url} pictureUrl={cat.pictureUrl} />)) 
-                    :(
+                    (categories.map((cat) => <CategoryCard key={cat.id} name={cat.name} categoryUrl={cat.url} pictureUrl={cat.pictureUrl} />))
+                    : (
                         <div>Cargando categorias...</div>
 
                     )

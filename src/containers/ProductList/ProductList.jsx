@@ -4,30 +4,35 @@ import './ProductList.css'
 import { useEffect, useState, useContext } from 'react'
 import PRODUCTS from '../../utils/sample-data'
 import { Store } from '../../store'
+import { getFirestore } from '../../firebase'
 
 const ProductList = ({ title }) => {
     const [data, setData] = useContext(Store)
-
     const [products, setProducts] = useState([]);
 
-    const getProducts = new Promise((resolve, reject) => {
-        setTimeout(() => resolve(PRODUCTS), 200)
-        console.log(PRODUCTS)
-    })
-
-    function handleAddCart(qty, ) {
+    function handleAddCart(qty,) {
         if (qty === 0) {
             return
         }
 
-        setData({ ...data, cart: { itemsQty: data.cart.itemsQty + qty} })
+        setData({ ...data, cart: { itemsQty: data.cart.itemsQty + qty } })
 
     }
 
     useEffect(() => {
-        getProducts.then((res) => setProducts(res))
+
+        const db = getFirestore()
+        const productsCollection = db.collection("products")
+        productsCollection.get().then((querySnapshot) => {
+            if (querySnapshot.size === 0) {
+                console.log("No results!")
+            }
+            setProducts(querySnapshot.docs.map(doc => doc.data()))
+        })
+
     }, [])
 
+    useEffect(() => console.log("aslkdalksdla", products), [])
     return (
         <div className="product-list-container">
             {/* <h1>{title}</h1> */}

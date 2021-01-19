@@ -1,10 +1,10 @@
 
 import './AddCartButton.css'
 
-const AddCartButton = ({ buttontxt, handleClick }) => {
+const AddCartButton = ({ buttontxt, handleClick, primary }) => {
 
     return (
-        <button className="add-button" alt="Agregar al Carrito" onClick={handleClick}>{buttontxt}</button>
+        <button className={`add-button ${primary ? "color-primary" : ""}`} alt="Agregar al Carrito" onClick={handleClick}>{buttontxt}</button>
     )
 }
 

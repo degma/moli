@@ -90,7 +90,7 @@ const CartPage = () => {
                                         </td>
                                         <td className="cart-product-total">$ {item.quantity * item.price}</td>
                                         <td className="cart-product-remove">
-                                            <AddCartButton buttontxt="Eliminar" handleClick={() => removeItem(item)} />
+                                            <AddCartButton buttontxt="Eliminar" handleClick={() => removeItem(item)} primary />
                                         </td>
                                     </tr>
 
@@ -101,7 +101,7 @@ const CartPage = () => {
                     </table>
 
                     <div className="cart-prods-footer-row">
-                        <AddCartButton buttontxt="BORRAR CARRITO" handleClick={removeCart} />
+                        <AddCartButton buttontxt="BORRAR CARRITO" handleClick={removeCart} primary />
                         <h1>TOTAL: $ {data.cart.items.reduce((acc, i) => acc + i.price * i.quantity, 0)}</h1>
                     </div>
                 </div>
