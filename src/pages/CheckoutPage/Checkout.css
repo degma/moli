@@ -1,0 +1,30 @@
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 10px;
+}
+
+.checkout-form input {
+  width: 400px;
+}
+
+.checkout-confirmed {
+  text-align: center;
+
+}
+
+
+.checkout-details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 20px;
+}
+
+.checkout-items p {
+    text-align: left;
+}

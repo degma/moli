@@ -22,16 +22,16 @@ const ProductDetail = ({ item }) => {
     }
 
     function removeFromCart() {
+        console.log(item)
 
-
-        if (item.quantity > 0) {
+        if (itemInCart.quantity > 0) {
             const filteredItems = data.cart.items.filter(e => e.id !== item.id)
             console.log("filtered items", filteredItems)
             setData({
                 ...data,
                 cart: {
                     ...data.cart,
-                    itemsQty: data.cart.itemsQty - item.quantity,
+                    itemsQty: data.cart.itemsQty - itemInCart.quantity,
                     items:
                         filteredItems
 

@@ -27,7 +27,13 @@ const ProductList = ({ title }) => {
             if (querySnapshot.size === 0) {
                 console.log("No results!")
             }
-            setProducts(querySnapshot.docs.map(doc => doc.data()))
+            console.log(querySnapshot.docs.map(doc => console.log(doc.id, doc.data())))
+
+            setProducts(querySnapshot.docs.map(doc => {
+                let document = doc.data()
+                document.id = doc.id
+                return document
+            }))
         })
 
     }, [])

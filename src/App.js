@@ -11,15 +11,16 @@ import ShippingPage from "./pages/ShippingPage";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductPage from "./pages/ProductPage";
+import CheckoutPage from "./pages/CheckoutPage";
 import { Store } from "./store";
 
 function App() {
   const [data, setData] = useState({
-    cart:{
-      total:0,
+    cart: {
+      total: 0,
       itemsQty: 0,
-      items:[]
-    }
+      items: [],
+    },
   });
   const windowResize = (e) => {
     console.log(e);
@@ -41,7 +42,7 @@ function App() {
             <Route exact path="/productos">
               <ProductsPage />
             </Route>
-            <Route path="/productos/:productName?">
+            <Route path="/productos/:productId?">
               <ProductPage />
             </Route>
             <Route path="/contacto">
@@ -55,6 +56,9 @@ function App() {
             </Route>
             <Route path="/envios">
               <ShippingPage />
+            </Route>
+            <Route path="/checkout">
+              <CheckoutPage />
             </Route>
             <Route path="*">
               <ErrorPage />

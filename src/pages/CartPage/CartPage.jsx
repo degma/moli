@@ -42,7 +42,6 @@ const CartPage = () => {
             removeItem(item)
         } else {
             const qty = (action === "m" ? changedItem.quantity - 1 : changedItem.quantity + 1)
-            console.log(qty)
             changedItem.quantity = qty
             const filteredItems = data.cart.items.filter(e => e.id !== changedItem.id)
             const orderedItems = [...filteredItems, changedItem].sort()
@@ -79,7 +78,7 @@ const CartPage = () => {
                         <tbody>
                             {
                                 data.cart.items.sort().map(item => (
-                                    <tr className="cart-prods-row">
+                                    <tr className="cart-prods-row" key={item.id}>
                                         <td className="cart-product-thumbnail">
                                             <img className="cart-product-picture" src={item.pictureUrl} />
                                         </td>
@@ -103,6 +102,10 @@ const CartPage = () => {
                     <div className="cart-prods-footer-row">
                         <AddCartButton buttontxt="BORRAR CARRITO" handleClick={removeCart} primary />
                         <h1>TOTAL: $ {data.cart.items.reduce((acc, i) => acc + i.price * i.quantity, 0)}</h1>
+                    </div>
+                    <div>
+                        <AddCartButton buttontxt="Finalizar Compra" handleClick={() => history.push('/checkout')} secondary />
+
                     </div>
                 </div>
             ) :

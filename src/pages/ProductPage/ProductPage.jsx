@@ -7,21 +7,17 @@ import "./ProductPage.css"
 
 const ProductPage = () => {
 
-    const { productName } = useParams();
+    const { productId } = useParams();
     const [product, setProduct] = useState(null);
 
 
     useEffect(() => {
         const db = getFirestore()
-
+        console.log(productId)
         db.collection("products")
-            .where("url", "==", productName)
+            .doc(productId)
             .get()
-            .then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    setProduct(doc.data())
-                });
-            })
+            .then((doc)=> setProduct(doc.data()))
             .catch(error=> console.log("NO EXISTE EL PRODUCTO", error));
     }, []);
 

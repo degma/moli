@@ -22,7 +22,9 @@ const CategoryPage = () => {
             .then((querySnapshot) => {
                 const prods = []
                 querySnapshot.forEach(doc => {
-                    prods.push(doc.data())
+                    const document = doc.data()
+                    document.id = doc.id
+                    prods.push(document)
                 })
                 setProducts(prods)
             })
