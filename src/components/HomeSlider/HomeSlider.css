@@ -1,0 +1,12 @@
+.slider-imgs{
+    width: 1170px;
+}
+
+.slider{
+    z-index: 101;
+}
+
+
+.slider > a  {
+    border: 0px;
+}

@@ -13,10 +13,10 @@ const CartWidget = ({ value = 0, total = 0 }) => (
                     ""
                 }
             </div>
-            {/* <div className="cart-text-and-total">
+            <div className="cart-text-and-total">
                 <h4>Mi Carrito</h4>
                 <p className="cart-total">${total}</p>
-            </div> */}
+            </div>
         </div>
     </Link>
 

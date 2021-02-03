@@ -27,8 +27,6 @@ const ProductList = ({ title }) => {
             if (querySnapshot.size === 0) {
                 console.log("No results!")
             }
-            console.log(querySnapshot.docs.map(doc => console.log(doc.id, doc.data())))
-
             setProducts(querySnapshot.docs.map(doc => {
                 let document = doc.data()
                 document.id = doc.id
@@ -38,10 +36,8 @@ const ProductList = ({ title }) => {
 
     }, [])
 
-    useEffect(() => console.log("aslkdalksdla", products), [])
     return (
         <div className="product-list-container">
-            {/* <h1>{title}</h1> */}
             <div className="product-card-list">
                 {
                     products.length ?

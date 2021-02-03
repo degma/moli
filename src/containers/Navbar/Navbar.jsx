@@ -1,6 +1,7 @@
 
 import { useState, useEffect, useContext } from 'react'
-import logo from '../../assets/moli.svg'
+import { useLocation } from 'react-router-dom'
+import logo from '../../assets/moli.png'
 import CartWidget from '../../components/CartWidget'
 import { Link } from 'react-router-dom'
 import MENU_ITEMS from '../../utils/main-menu'
@@ -10,6 +11,7 @@ import { Store } from '../../store'
 function Navbar() {
     const [data, setData] = useContext(Store)
     const [menu, setMenu] = useState([])
+    const location = useLocation()
 
     const getMenu = new Promise((resolve, reject) => {
         setTimeout(() => resolve(MENU_ITEMS))
@@ -20,17 +22,24 @@ function Navbar() {
     }, [])
 
     return (
-        <div className="navbar">
-            <Link to="/"><img className="logo" src={logo} alt="Logo MOLI SÁNDWICHES DE MIGA Y TORTAS" /></Link>
-            <div className="menu">
-                <ul >
-                    {
-                        menu.map((item)=> <li><Link key={item.name} className="menu-item" to={item.url} >{item.name}</Link></li> )
-                    }
-                </ul>
+        <header className="sticky">
+            <div className="top-bar">
+                Hola
             </div>
-            <CartWidget value={data.cart.itemsQty} total={data.cart.total} />
-        </div>
+            <div className="navbar">
+                <div className="menu">
+                    <ul >
+                        {
+                            menu.map((item) => <li key={item.name}><Link className={`menu-item ${item.url === location.pathname ? 'active' : ''}`} to={item.url} >{item.name}</Link></li>)
+                        }
+                    </ul>
+                </div>
+                <Link to="/"><img className="logo" src={logo} alt="MOLI SÁNDWICHES DE MIGA Y TORTAS" /></Link>
+                <div className="navbar-cart-icon">
+                    <CartWidget value={data.cart.itemsQty} total={data.cart.total} />
+                </div>
+            </div>
+        </header>
     )
 }
 

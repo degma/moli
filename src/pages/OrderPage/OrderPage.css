@@ -1,0 +1,41 @@
+.order-main-container{
+    margin-top: 40px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-main-container > h2 {
+    display: block;
+    width: 100%;
+    padding-left: 130px;
+    text-align: left;
+}
+
+h2 > span{
+    color: gray;
+}
+
+.order-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.order-customer{
+    width: 450px;
+}
+
+.order-details{
+    width: 450px;
+}
+
+
+.order-customer > p{
+    text-align: left;
+}
+
+.order-container p{
+    text-transform: capitalize;
+}

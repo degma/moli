@@ -1,10 +1,11 @@
-const { default: ProductList } = require("../../containers/ProductList")
+import ProductList from "../../containers/ProductList"
 
+import "./ProductsPage.css"
 
 const ProductsPage = () => {
 
-    return(
-        <div>
+    return (
+        <div className="products-container">
             <h1>Productos</h1>
             <ProductList />
 

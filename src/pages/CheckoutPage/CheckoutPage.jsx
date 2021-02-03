@@ -16,8 +16,7 @@ const CheckoutPage = () => {
         lastName: "",
         email: "",
         phone: "",
-        shipping: "",
-        payment: ""
+
     }
     const [formData, setFormData] = useState(initialFormState)
 
@@ -27,7 +26,10 @@ const CheckoutPage = () => {
         customer: formData,
         items: data.cart.items,
         total: data.cart.items.reduce((acc, item) => acc + (item.quantity * item.price), 0),
-        date: firebase.firestore.Timestamp.fromDate(new Date())
+        date: firebase.firestore.Timestamp.fromDate(new Date()),
+        shipping: formData.shipping,
+        payment: formData.payment,
+        status: "new"
     }
 
 
@@ -80,6 +82,13 @@ const CheckoutPage = () => {
                                         <option value="retiro" >Retiro</option>
                                         <option value="envio">Envío a Domicilio</option>
                                     </select>
+                                    {formData.shipping === "envio" ?
+                                        (
+                                            <>
+                                            <input name="address" type="text" value={formData.address} onChange={handleChangeInput} placeholder="Dirección" />
+                                            </>
+                                        ) :
+                                        ("")}
                                     <h3>Método de Pago:</h3>
                                     <select name="payment" onChange={handleChangeInput}>
                                         <option value="">Seleccione forma de Pago</option>

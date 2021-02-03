@@ -1,6 +1,11 @@
-h1.title{
-    font-size: 34px;
-    font-weight: 200;
-    text-transform: uppercase;
-    color: var(--secondary-color);
+h1.title {
+  font-size: 34px;
+  font-weight: 200;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+
+.section-container {
+  width: 1170px;
 }

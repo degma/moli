@@ -1,0 +1,27 @@
+.order-items-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--light-gray);
+  margin-top: 2px;
+}
+
+.order-items-img{
+    width: 105px;
+}
+
+.order-items-detail{
+    width: 100%;
+}
+.order-items-total{
+    width: 100px;
+}
+.order-items-img > img{
+  width: 100px;
+}
+
+
+.order-items-detail > p{
+    margin: 5px;
+    text-align: left;
+}

@@ -1,10 +1,12 @@
 import ItemQuantity from '../ItemQuantity'
 import { useState, useContext, useEffect } from 'react'
 import AddCartButton from '../AddCartButton'
+import RemoveIcon from "../../assets/remove.svg"
 // import { useHistory } from 'react-router-dom'
 
 import './ProductDetail.css'
 import { Store } from '../../store'
+import CategoryCard from '../CategoryCard'
 
 const ProductDetail = ({ item }) => {
     // const history = useHistory();
@@ -32,6 +34,7 @@ const ProductDetail = ({ item }) => {
                 cart: {
                     ...data.cart,
                     itemsQty: data.cart.itemsQty - itemInCart.quantity,
+                    total: data.cart.total - (itemInCart.quantity * itemInCart.price),
                     items:
                         filteredItems
 
@@ -56,6 +59,7 @@ const ProductDetail = ({ item }) => {
                 cart: {
                     ...data.cart,
                     itemsQty: data.cart.itemsQty + qty,
+                    total: data.cart.total + (qty * addedItem.price),
                     items: [
                         ...filteredItems,
                         addedItem
@@ -70,6 +74,7 @@ const ProductDetail = ({ item }) => {
                 cart: {
                     ...data.cart,
                     itemsQty: data.cart.itemsQty + qty,
+                    total: data.cart.total + ( qty * addedItem.price),
                     items: [
                         ...data.cart.items,
                         addedItem
@@ -98,7 +103,7 @@ const ProductDetail = ({ item }) => {
 
                 {
                     itemInCart ?
-                        (<div className="product-detail-addedunits"> {itemInCart.quantity} unidad{itemInCart.quantity > 1 ? "es" : ''} en el Carrito <button onClick={removeFromCart}>X ELIMINAR</button></div>)
+                        (<div className="product-detail-addedunits"> {itemInCart.quantity} unidad{itemInCart.quantity > 1 ? "es" : ''} en el Carrito <button onClick={removeFromCart}><img src={RemoveIcon} /></button></div>)
                         :
                         ""
                 }

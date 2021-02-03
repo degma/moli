@@ -4,6 +4,8 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .cart-product-picture {
@@ -19,6 +21,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.cart-container > h1 {
+  display: block;
+  width: 70%;
+  text-align: left;
 }
 
 .cart-table {

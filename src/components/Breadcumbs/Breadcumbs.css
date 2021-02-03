@@ -1,0 +1,12 @@
+.breadcumbs-container {
+  height: 90px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.breadcumbs-container > p {
+  margin: 0px;
+  text-align: left;
+  text-transform: capitalize;
+}
+

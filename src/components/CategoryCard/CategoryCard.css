@@ -1,18 +1,27 @@
-h2.category-card-name{
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 20px;
-    text-align: center;
-    margin: 0px;
+.category-card-picture{
+    border-radius: 3px;
 }
 
-
-div.category-card-container:hover {
-    color: var(--secondary-color);
-    border: 1px red;
+.category-card-container:hover img {
+  transform: scale(1.5);
 }
 
-img.category-card-picture{
-    width: 300px;
-    height: 100%;
+h2.category-card-name {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  margin: 0px;
+}
+
+.category-card-picture {
+  overflow: hidden;
+  height: 270px;
+}
+
+.category-card-picture img {
+    transition: transform 0.5s ease;
+  width: 300px;
+  height: 270px;
+
 }

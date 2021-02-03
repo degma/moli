@@ -11,7 +11,7 @@ export default [
   },
   {
     id: 1003,
-    name: "Zonas de Envío",
+    name: "Envíos",
     url:"/envios"
   }
 ];

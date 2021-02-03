@@ -13,3 +13,7 @@
 .color-primary {
   background-color: var(--primary-color);
 }
+
+.add-button:hover{
+  opacity: 80%;
+}
