@@ -53,12 +53,14 @@ div.product-card:hover {
     margin: 0px;
     padding: 0px;
     border: 0px;
+    
 }
 
 .product-card-title > a {
     margin: 0px;
     padding: 0px;
     border: 0px;
+    color: black;
 }
 
 .product-details > a {

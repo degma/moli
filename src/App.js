@@ -15,14 +15,12 @@ import CheckoutPage from "./pages/CheckoutPage";
 import TrackPage from "./pages/TrackPage";
 import OrderPage from "./pages/OrderPage"
 import { Store } from "./store";
-import Breadcumbs from "./components/Breadcumbs";
 
 function App() {
   const [data, setData] = useState({
     cart: {
       total: 0,
       itemsQty: 0,
-      total: 0,
       items: [],
     },
   });
