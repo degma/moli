@@ -10,6 +10,8 @@
 
 .cart-product-picture {
   width: 100px;
+  border-radius: 3px;
+  border: 1px solid var(--light-gray);
 }
 .cart-product-precio th{
   width: 175px;

@@ -8,5 +8,15 @@
   margin: 0px;
   text-align: left;
   text-transform: capitalize;
+
 }
 
+
+.breadcumbs-container a {
+  color: gray;
+  font-weight: 800;
+}
+.breadcumbs-container a:hover{
+  color: var(--secondary-color);
+  font-weight: 800;
+}

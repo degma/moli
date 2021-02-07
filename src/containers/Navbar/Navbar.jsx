@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import MENU_ITEMS from '../../utils/main-menu'
 import './Navbar.css'
 import { Store } from '../../store'
+import Topbar from '../../components/Topbar/'
 
 function Navbar() {
     const [data, setData] = useContext(Store)
@@ -23,9 +24,7 @@ function Navbar() {
 
     return (
         <header className="sticky">
-            <div className="top-bar">
-                Hola
-            </div>
+            <Topbar />
             <div className="navbar">
                 <div className="menu">
                     <ul >

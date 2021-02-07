@@ -6,7 +6,7 @@ const CategoryCard = ({ name, pictureUrl, categoryUrl }) => {
         <Link to={categoryUrl}>
             <div className="category-card-container">
                 <div className="category-card-picture">
-                    <img src={pictureUrl} />
+                    <img src={pictureUrl} alt={name}/>
                 </div>
                 <h2 className="category-card-name">{name}</h2>
             </div>

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+
 import { Link } from 'react-router-dom';
 import "./Breadcumbs.css"
 
@@ -9,7 +9,7 @@ const Breadcumbs = ({ product }) => {
             { product ? (
                 <p>
                     <Link to="/">Inicio</Link> / <Link to={`/categoria/${product.category}`}>{product.category.replace(/-/g, " ")}</Link> / {product.name}
-                    </p>
+                </p>
             ) : ("")}
         </div>
     )

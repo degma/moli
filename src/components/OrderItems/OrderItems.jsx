@@ -8,7 +8,7 @@ const OrderItems = ({items}) => {
                 items.map(item => (
                     <div className="order-items-container">
                         <div className="order-items-img">
-                            <img src={item.pictureUrl}/>
+                            <img src={item.pictureUrl} alt={item.name}/>
                         </div>
                         <div className="order-items-detail">
                             <p>{item.name}</p>

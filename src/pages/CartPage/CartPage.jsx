@@ -47,11 +47,7 @@ const CartPage = () => {
             const qty = (action === "m" ? changedItem.quantity - 1 : changedItem.quantity + 1)
             changedItem.quantity = qty
             const index = itemsArr.findIndex(x => x.id === changedItem.id)
-            console.log(index)
-            // const filteredItems = data.cart.items.filter(e => e.id !== changedItem.id)
             itemsArr.splice(index, 1, changedItem);
-            console.log(itemsArr)
-
             setData({
                 ...data,
                 cart: {
@@ -89,7 +85,7 @@ const CartPage = () => {
                                 data.cart.items.sort().map(item => (
                                     <tr className="cart-prods-row" key={item.id}>
                                         <td className="cart-product-thumbnail">
-                                            <img className="cart-product-picture" src={item.pictureUrl} />
+                                            <img className="cart-product-picture" src={item.pictureUrl} alt={`Foto ${item.name}`} />
                                         </td>
                                         <td className="cart-product-name">{item.name}</td>
                                         <td className="cart-product-price">$ {item.price}</td>

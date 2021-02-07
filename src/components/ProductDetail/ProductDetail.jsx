@@ -2,14 +2,14 @@ import ItemQuantity from '../ItemQuantity'
 import { useState, useContext, useEffect } from 'react'
 import AddCartButton from '../AddCartButton'
 import RemoveIcon from "../../assets/remove.svg"
-// import { useHistory } from 'react-router-dom'
+
 
 import './ProductDetail.css'
 import { Store } from '../../store'
-import CategoryCard from '../CategoryCard'
+
 
 const ProductDetail = ({ item }) => {
-    // const history = useHistory();
+
     const [quantity, setQuantity] = useState(0)
     const [data, setData] = useContext(Store)
     const itemInCart = data.cart.items.find(e => e.id === item.id)
@@ -103,7 +103,7 @@ const ProductDetail = ({ item }) => {
 
                 {
                     itemInCart ?
-                        (<div className="product-detail-addedunits"> {itemInCart.quantity} unidad{itemInCart.quantity > 1 ? "es" : ''} en el Carrito <button onClick={removeFromCart}><img src={RemoveIcon} /></button></div>)
+                        (<div className="product-detail-addedunits"> {itemInCart.quantity} unidad{itemInCart.quantity > 1 ? "es" : ''} en el Carrito <button onClick={removeFromCart}><img src={RemoveIcon} alt="Eliminar productos del carrito"/></button></div>)
                         :
                         ""
                 }

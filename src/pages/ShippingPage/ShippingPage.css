@@ -1,10 +1,15 @@
 
 .shipping-mapa{
-    width: 400px;
+    width: 200px;
 }
 
 .shipping-container > h1{
     display: block;
     text-align: left;
     font-weight: 400;
+}
+
+.shipping-content {
+    display: inline-flex;
+
 }

@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer">
             <div className="footer-container">
                 <div className="left-col">
-                    <img src={Logo} className="footer-logo" />
+                    <img src={Logo} className="footer-logo" alt="Logo MOLI Sandwiches de Miga" />
                 </div>
                 <div className="right-col">
                     <h4>INFORMACIÓN</h4>
@@ -24,7 +24,7 @@ const Footer = () => {
                     <h4>SEGUINOS EN</h4>
                     <ul>
                         <li>
-                            <img src={InstagramIcon} /> <img src={FacebookIcon} />
+                            <a href="http://www.instagram.com"><img src={InstagramIcon} alt="Logo Instagram, seguinos!" /></a><a href="http://www.facebook.com"><img src={FacebookIcon} alt="Logo Facebook, seguinos!" /></a>
                         </li>
                     </ul>
                 </div>

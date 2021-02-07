@@ -29,6 +29,7 @@
 }
 .footer-poweredby{
     background-color: white;
+    
     width: 100%;
     margin: 0px;
     padding: 15px 0 15px 0;
@@ -39,6 +40,9 @@
 
 .footer-poweredby p{
     margin: 0px;
+}
+.footer-poweredby a{
+    color: black;
 }
 
 .right-col > ul > li {
@@ -55,7 +59,7 @@
     font-weight: 600;
 }
 
-.follow-us-col  > ul > li > img {
+.follow-us-col  > ul > li > a >img {
     width: 20px;
     margin-right: 3px;
 }

@@ -4,6 +4,7 @@
 
 .category-card-container:hover img {
   transform: scale(1.5);
+  color: var(--secondary-color);
 }
 
 h2.category-card-name {
@@ -12,7 +13,9 @@ h2.category-card-name {
   font-size: 20px;
   text-align: center;
   margin: 0px;
+  color: black;
 }
+
 
 .category-card-picture {
   overflow: hidden;

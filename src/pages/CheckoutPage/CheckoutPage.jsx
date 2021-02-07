@@ -4,7 +4,6 @@ import { getFirestore } from '../../firebase'
 import firebase from 'firebase/app'
 import { Store } from '../../store'
 import './Checkout.css'
-import { Link } from 'react-router-dom'
 
 const CheckoutPage = () => {
     const db = getFirestore()
@@ -19,8 +18,6 @@ const CheckoutPage = () => {
 
     }
     const [formData, setFormData] = useState(initialFormState)
-
-    const orders = db.collection("orders")
 
     let newOrder = {
         customer: formData,
@@ -51,6 +48,7 @@ const CheckoutPage = () => {
                     ...data,
                     cart: {
                         ...data.cart,
+                        total: 0,
                         itemsQty: 0,
                         items: []
                     }

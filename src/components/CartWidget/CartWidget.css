@@ -13,6 +13,7 @@
   justify-content: space-between;
   align-items: flex-start;
   font-size: 14px;
+  color: black;
 }
 p .cart-text-and-total {
   font-size: 14px;

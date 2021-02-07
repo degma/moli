@@ -4,8 +4,11 @@
     border-radius: 3px;
     border: 1px solid #ACACAC;
     background-color: white;
-    margin: 5px;
+    margin: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 }
+
+
 .product-details {
     display: flex;
     height: 100px;
@@ -26,6 +29,9 @@ h1.product-card-title {
     font-weight: 500;
 }
 
+h1.product-card-title:hover{
+    color: var(--secondary-color);
+}
 
 h2.product-card-price{
     font-size: 16px;
@@ -67,6 +73,7 @@ div.product-card:hover {
     margin: 0px;
     padding: 0px;
     border: 0px;
+    color: black;
 }
 
 @media only screen and (max-width: 400px) {

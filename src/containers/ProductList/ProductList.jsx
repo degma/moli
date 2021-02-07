@@ -2,7 +2,6 @@
 import ProductCard from '../../components/ProductCard'
 import './ProductList.css'
 import { useEffect, useState, useContext } from 'react'
-import PRODUCTS from '../../utils/sample-data'
 import { Store } from '../../store'
 import { getFirestore } from '../../firebase'
 

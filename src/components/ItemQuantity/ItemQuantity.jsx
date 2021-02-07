@@ -12,11 +12,11 @@ const ItemQuantity = ({ value = 0, onChange }) => {
     return (
         <div className="item-quantity-container">
             <button className="add-remove-buttons" disabled={ value === 0 } onClick={() => handleChange("m")}>
-                <img className="add-remove-icons" src={Minus} />
+                <img className="add-remove-icons" src={Minus} alt="Agregar 1 unidad"/>
             </button>
             <p className="quantity-value">{value}</p>
             <button className="add-remove-buttons" disabled={ value === 30 } onClick={() => handleChange("p")}>
-                <img className="add-remove-icons" src={Plus} />
+                <img className="add-remove-icons" src={Plus} alt="Eliminar 1 unidad"/>
             </button>
         </div>
     )

@@ -1,4 +1,3 @@
-import { useHistory } from "react-router-dom"
 import Slider from "react-slick";
 import Zonas from "../../assets/zonas.png"
 import Chips from "../../assets/chips.png"
@@ -10,7 +9,6 @@ import "./HomeSlider.css"
 
 
 const HomeSlider = () => {
-    const history = useHistory();
     const settings = {
         dots: true,
         infinite: true,
@@ -25,10 +23,10 @@ const HomeSlider = () => {
         <div className="slider">
             <Slider {...settings}>
                 <div>
-                    <img src={Zonas} className="slider-imgs" />
+                    <img src={Zonas} className="slider-imgs" alt="Banner compra online y recibilo en tu casa"/>
                 </div>
                 <div>
-                    <img src={Chips} className="slider-imgs" />
+                    <img src={Chips} className="slider-imgs" alt="Banner proba los nuevos chips y pancitos integrales" />
                 </div>
 
             </Slider>
