@@ -4,6 +4,12 @@
 }
 
 
+.contact-container-form > h3 {
+    text-align: center;
+    font-weight: 400;
+}
+
+
 .contact-container-content {
     display: flex;
     flex-direction: row;
@@ -41,4 +47,15 @@
 
 .contact-container-left img{
     width: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+p.contact-form-error{
+    color: red;
+    text-align: left;
 }

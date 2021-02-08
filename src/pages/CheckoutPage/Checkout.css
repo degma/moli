@@ -12,6 +12,7 @@
 
 .checkout-confirmed {
   text-align: center;
+  margin-top: 50px;
 
 }
 
@@ -27,4 +28,9 @@
 
 .checkout-items p {
     text-align: left;
+}
+
+.checkout-form label {
+  color: gray;
+  margin: 0px;
 }

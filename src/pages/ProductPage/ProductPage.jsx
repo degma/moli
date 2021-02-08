@@ -11,10 +11,8 @@ const ProductPage = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState(null);
 
-
-    useEffect(() => {
+    useEffect(()=>{        
         const db = getFirestore()
-        console.log(productId)
         db.collection("products")
             .doc(productId)
             .get()

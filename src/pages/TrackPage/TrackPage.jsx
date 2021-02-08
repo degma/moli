@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom"
-import AddCartButton from "../../components/AddCartButton"
+import CustomButton from "../../components/CustomButton"
 import "./TrackPage.css"
 
 const TrackPage = () => {
@@ -22,7 +22,7 @@ const TrackPage = () => {
             <h1>SEGUIMIENTO DEL PEDIDO</h1>
             <form className="tracking-form" onSubmit={handleTrack}>
                 <input type="text" className="tracking-input" placeholder="Código del pedido" onChange={handleOrderChange} />
-                <AddCartButton buttontxt="ENVIAR" />
+                <CustomButton buttontxt="ENVIAR" />
             </form>
 
         </div>

@@ -10,15 +10,15 @@ import { Store } from '../../store'
 import Topbar from '../../components/Topbar/'
 
 function Navbar() {
-    const [data, setData] = useContext(Store)
+    const [data] = useContext(Store)
     const [menu, setMenu] = useState([])
     const location = useLocation()
 
-    const getMenu = new Promise((resolve, reject) => {
-        setTimeout(() => resolve(MENU_ITEMS))
-    })
 
     useEffect(() => {
+        const getMenu = new Promise((resolve, reject) => {
+            setTimeout(() => resolve(MENU_ITEMS))
+        })
         getMenu.then(res => setMenu(res))
     }, [])
 

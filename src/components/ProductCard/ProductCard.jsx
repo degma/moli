@@ -1,5 +1,5 @@
 import { Link, useHistory } from 'react-router-dom'
-import AddCartButton from '../AddCartButton'
+import CustomButton from '../CustomButton'
 import './ProductCard.css'
 
 
@@ -19,7 +19,7 @@ const ProductCard = ({ id, name, price , pictureUrl }) => {
                 </Link>
                 <h2 className="product-card-price">${price}</h2>
                 <footer className="footer-buttons">
-                    <AddCartButton buttontxt="AGREGAR AL CARRITO" handleClick={() => history.push(`/productos/${id}`)} />
+                    <CustomButton buttontxt="AGREGAR AL CARRITO" handleClick={() => history.push(`/productos/${id}`)} />
                 </footer>
             </div>
         </div>

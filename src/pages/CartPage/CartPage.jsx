@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
-import AddCartButton from '../../components/AddCartButton'
+import CustomButton from '../../components/CustomButton'
 import ItemQuantity from '../../components/ItemQuantity'
 import { Store } from '../../store'
 
@@ -58,11 +58,7 @@ const CartPage = () => {
                 }
             })
         }
-
-
-
     }
-
 
     return (
         <div>
@@ -94,7 +90,7 @@ const CartPage = () => {
                                         </td>
                                         <td className="cart-product-total">$ {item.quantity * item.price}</td>
                                         <td className="cart-product-remove">
-                                            <AddCartButton buttontxt="Eliminar" handleClick={() => removeItem(item)} primary />
+                                            <CustomButton buttontxt="Eliminar" handleClick={() => removeItem(item)} primary />
                                         </td>
                                     </tr>
 
@@ -105,11 +101,11 @@ const CartPage = () => {
                     </table>
 
                     <div className="cart-prods-footer-row">
-                        <AddCartButton buttontxt="BORRAR CARRITO" handleClick={removeCart} primary />
+                        <CustomButton buttontxt="BORRAR CARRITO" handleClick={removeCart} primary />
                         <h1>TOTAL: $ {data.cart.items.reduce((acc, i) => acc + i.price * i.quantity, 0)}</h1>
                     </div>
                     <div>
-                        <AddCartButton buttontxt="Finalizar Compra" handleClick={() => history.push('/checkout')} secondary />
+                        <CustomButton buttontxt="Finalizar Compra" handleClick={() => history.push('/checkout')} secondary />
 
                     </div>
                 </div>
@@ -118,7 +114,7 @@ const CartPage = () => {
                     <div className="cart-no-prods">
                         <h1> NO HAY PRODUCTOS </h1>
                         <p> Antes de finalizar la compras tenes que agregar productos.</p>
-                        <AddCartButton buttontxt="CONTINUAR NAVEGANDO" handleClick={() => history.push('/')} />
+                        <CustomButton buttontxt="CONTINUAR NAVEGANDO" handleClick={() => history.push('/')} />
                     </div>
                 )
             }

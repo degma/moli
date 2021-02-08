@@ -1,4 +1,4 @@
-export default [
+const MENU = [
   {
     id: 1001,
     name: "Productos",
@@ -15,3 +15,7 @@ export default [
     url:"/envios"
   }
 ];
+
+export default MENU 
+
+

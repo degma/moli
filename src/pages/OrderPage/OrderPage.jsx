@@ -8,17 +8,17 @@ import "./OrderPage.css"
 
 
 const steps = {
- "new" : 0,
- "in_progress": 1,
- "in_delivery": 2,
- "delivered": 3   
+    "new": 0,
+    "in_progress": 1,
+    "in_delivery": 2,
+    "delivered": 3
 }
 
 const OrderPage = () => {
     const { orderId } = useParams();
     const [order, setOrder] = useState("");
     const [isLoading, setIsLoading] = useState(false)
-
+    
     useEffect(() => {
         setIsLoading(true)
         const db = getFirestore()
@@ -31,9 +31,6 @@ const OrderPage = () => {
 
 
     }, []);
-    useEffect(() => {
-        console.log(order)
-    }, [order])
 
     if (isLoading) {
         return <p>Cargando...</p>
@@ -48,17 +45,26 @@ const OrderPage = () => {
                         <div className="order-main-container">
                             <h2>Detalle del Pedido <span>{orderId}</span></h2>
                             <Stepper steps={[{ title: 'Recibido' }, { title: 'En preparación' }, { title: 'En camino' }, { title: 'Entregado' }]} activeStep={steps[order.status]} />
-                            <hr/>
+                            <hr />
                             <div className="order-container">
                                 <div className="order-customer">
                                     <h3>Cliente</h3>
                                     <p>{order.customer.lastName}, {order.customer.name}</p>
-                                    <h3>Dirección</h3>
-                                    <p></p>
+                                    {order.shipping === 'envio' ?
+                                        (
+                                            <>
+                                                <h3>Dirección</h3>
+                                                <p>{order.address}</p>
+                                            </>
+                                        ) :
+                                        (
+                                            ""
+                                        )}
                                     <h3>Método de Pago</h3>
-                                    <p>{order.payment}</p>
+                                    <p>{order.payment.method}</p>
                                     <h3>Forma de Envío</h3>
-                                    <p>{order.shipping}</p>
+                                    <p>{order.shipping.method}</p>
+                                    <h2>Total: <span>${order.total}</span></h2>
                                 </div>
                                 <div className="order-details">
                                     <h3>Productos</h3>

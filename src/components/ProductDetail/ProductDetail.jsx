@@ -1,6 +1,6 @@
 import ItemQuantity from '../ItemQuantity'
 import { useState, useContext, useEffect } from 'react'
-import AddCartButton from '../AddCartButton'
+import CustomButton from '../CustomButton'
 import RemoveIcon from "../../assets/remove.svg"
 
 
@@ -98,7 +98,7 @@ const ProductDetail = ({ item }) => {
                 <p className="product-detail-description">{item.description}</p>
                 <div className="product-detail-addbuttons">
                     <ItemQuantity onChange={handleChange} value={quantity} />
-                    <AddCartButton buttontxt="Agregar al Carrito" handleClick={() => handleClickBuy(quantity)} />
+                    <CustomButton buttontxt="Agregar al Carrito" handleClick={() => handleClickBuy(quantity)} />
                 </div>
 
                 {

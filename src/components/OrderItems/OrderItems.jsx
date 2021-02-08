@@ -13,7 +13,7 @@ const OrderItems = ({items}) => {
                         <div className="order-items-detail">
                             <p>{item.name}</p>
                             <p>Cantidad: {item.quantity}</p>
-                            <p>Precio unitario: {item.price}</p>
+                            <p>Precio unitario: $ {item.price}</p>
                         </div>
                         <div className="order-items-total">
                             <p>$ {item.price * item.quantity}</p>
