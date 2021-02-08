@@ -1,86 +1,34 @@
-# E-COMMERCE
+# E-COMMERCE Sandwicheria
 
-Este proyecto fue construido para el curso de ReactJS de CoderHouse, utilizando 'create-react-app' y 'react-router-dom' para manejar las rutas. Al momento los estilos se estan realizando puramente con CSS. Para mejorar la organización, el proyecto se encuentra estructurado en: Components, Containers y Pages. Las funcionalidades actuales son: 
+Este proyecto fue construido para el curso de ReactJS de CoderHouse, utilizando 'create-react-app' y 'react-router-dom' para manejar las rutas. Los estilos se estan manejaron puramente con CSS. 
+Para mejorar la organización, el proyecto se encuentra estructurado en: Components, Containers y Pages. 
+
+Las funcionalidades actuales son: 
 - Listar Categorías
 - Listar Productos de una Categoría
 - Listar Todos los Productos
 - Ver detalles de un producto
-- Mostrar las páginas: Contacto, Envíos y Carrito de Compras
+- Agregar/Eliminar/Editar Productos al Carrito
+- Crear un Pedido
+- Consultar Estado de un Pedido **(New)**
+- Formulario de Contacto
+
+Para mejorar la experiencia del usuario se usaron las siguientes librerias:
+- **react-slick:** para crear un slider en la home-page que muestre información relevante que el usuario, envios, ofertas, etc.
+- **typewriter-effect:** es una librería muy liviana (56k) que da un efecto de tipeo a mano de escribir a los mensajes que mostramos en la TOP bar.
+- **react-stepper-horizontal:** es una libreria que permite implementar muy simple un stepper para mostrar el Estado del Pedido. Si bien con la funcionalidad actual solo permite realizar hasta la creación del pedido, en futuras versiones se implementara un backend que permite cambiar el estado del Pedido (Recibido, En Preparación, En Delivery, Entregado). 
+- En cuanto a la base de datos se implemento Firebase y se esta utilizando la correspondiente libreria **firebase**. 
 
 A continuación una demo de la navegabilidad con la funcionalidad actual: 
 
 ![](demo_site.gif)
 
 
-Para instalar este proyecto en local, seguir las siguientes instrucciones:
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
+Para instalar este proyecto en local, ejecutar las siguientes instrucciones:
+1. Clonar el Proyecto:
+### `git clone https://github.com/degma/moli.git"`
+2. Instalar las dependencias:
+### `yarn install`
+3. Ejecutar la aplicación en local:
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
